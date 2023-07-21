@@ -13,6 +13,7 @@
 		6A07C66D2A697F0D000241EE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6A07C66C2A697F0D000241EE /* Kingfisher */; };
 		6A07C66F2A697F35000241EE /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A07C66E2A697F35000241EE /* String+Extension.swift */; };
 		6A07C6722A69827D000241EE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A07C6712A69827D000241EE /* HomeViewController.swift */; };
+		6A4A39C82A69ABA3009532FD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4A39C72A69ABA3009532FD /* CardView.swift */; };
 		6AF418A12A67153300432775 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF418A02A67153300432775 /* AppDelegate.swift */; };
 		6AF418A32A67153300432775 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF418A22A67153300432775 /* SceneDelegate.swift */; };
 		6AF418A82A67153300432775 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AF418A62A67153300432775 /* Main.storyboard */; };
@@ -20,6 +21,10 @@
 		6AF418AD2A67153500432775 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AF418AB2A67153500432775 /* LaunchScreen.storyboard */; };
 		6AF418BB2A6716CF00432775 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF418BA2A6716CF00432775 /* OnboardingViewController.swift */; };
 		6AF418BD2A67175B00432775 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF418BC2A67175B00432775 /* OnboardingCollectionViewCell.swift */; };
+		6AF444712A6AA61A00B9AA0B /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF444702A6AA61A00B9AA0B /* UIView + Extension.swift */; };
+		6AF444752A6AB61800B9AA0B /* DishPortraitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF444732A6AB61800B9AA0B /* DishPortraitCollectionViewCell.swift */; };
+		6AF444762A6AB61800B9AA0B /* DishPortraitCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AF444742A6AB61800B9AA0B /* DishPortraitCollectionViewCell.xib */; };
+		6AF444782A6AB8E700B9AA0B /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF444772A6AB8E700B9AA0B /* Dish.swift */; };
 		6AF5C9B32A68139300A68A90 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF5C9B22A68139300A68A90 /* OnboardingSlide.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +34,7 @@
 		6A07C6692A697A16000241EE /* CategoryDish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDish.swift; sourceTree = "<group>"; };
 		6A07C66E2A697F35000241EE /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		6A07C6712A69827D000241EE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6A4A39C72A69ABA3009532FD /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		6AF4189D2A67153300432775 /* FoodOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AF418A02A67153300432775 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AF418A22A67153300432775 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +44,10 @@
 		6AF418AE2A67153500432775 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AF418BA2A6716CF00432775 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		6AF418BC2A67175B00432775 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		6AF444702A6AA61A00B9AA0B /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		6AF444732A6AB61800B9AA0B /* DishPortraitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishPortraitCollectionViewCell.swift; sourceTree = "<group>"; };
+		6AF444742A6AB61800B9AA0B /* DishPortraitCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishPortraitCollectionViewCell.xib; sourceTree = "<group>"; };
+		6AF444772A6AB8E700B9AA0B /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
 		6AF5C9B22A68139300A68A90 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,6 +66,7 @@
 		6A07C6632A697614000241EE /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				6AF444722A6AB5D200B9AA0B /* DishPortraitCollection */,
 				6A07C6642A697625000241EE /* CategoryCollectionViewCell */,
 			);
 			path = CollectionViewCell;
@@ -76,6 +87,14 @@
 				6A07C6712A69827D000241EE /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		6A4A39C62A69AB73009532FD /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				6A4A39C72A69ABA3009532FD /* CardView.swift */,
+			);
+			path = CardView;
 			sourceTree = "<group>";
 		};
 		6AF418942A67153300432775 = {
@@ -110,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				6A07C66E2A697F35000241EE /* String+Extension.swift */,
+				6AF444702A6AA61A00B9AA0B /* UIView + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -117,6 +137,7 @@
 		6AF418B52A67157900432775 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				6A4A39C62A69AB73009532FD /* CardView */,
 				6A07C6632A697614000241EE /* CollectionViewCell */,
 			);
 			path = CustomViews;
@@ -136,6 +157,7 @@
 			children = (
 				6AF5C9B22A68139300A68A90 /* OnboardingSlide.swift */,
 				6A07C6692A697A16000241EE /* CategoryDish.swift */,
+				6AF444772A6AB8E700B9AA0B /* Dish.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -147,6 +169,15 @@
 				6AF418BC2A67175B00432775 /* OnboardingCollectionViewCell.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		6AF444722A6AB5D200B9AA0B /* DishPortraitCollection */ = {
+			isa = PBXGroup;
+			children = (
+				6AF444732A6AB61800B9AA0B /* DishPortraitCollectionViewCell.swift */,
+				6AF444742A6AB61800B9AA0B /* DishPortraitCollectionViewCell.xib */,
+			);
+			path = DishPortraitCollection;
 			sourceTree = "<group>";
 		};
 		6AF5C9B42A682A0700A68A90 /* Files */ = {
@@ -228,6 +259,7 @@
 			files = (
 				6A07C6682A69767E000241EE /* CategoryCollectionViewCell.xib in Resources */,
 				6AF418AD2A67153500432775 /* LaunchScreen.storyboard in Resources */,
+				6AF444762A6AB61800B9AA0B /* DishPortraitCollectionViewCell.xib in Resources */,
 				6AF418AA2A67153500432775 /* Assets.xcassets in Resources */,
 				6AF418A82A67153300432775 /* Main.storyboard in Resources */,
 			);
@@ -240,15 +272,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AF444782A6AB8E700B9AA0B /* Dish.swift in Sources */,
 				6A07C66F2A697F35000241EE /* String+Extension.swift in Sources */,
 				6AF5C9B32A68139300A68A90 /* OnboardingSlide.swift in Sources */,
 				6AF418A12A67153300432775 /* AppDelegate.swift in Sources */,
 				6AF418BD2A67175B00432775 /* OnboardingCollectionViewCell.swift in Sources */,
+				6AF444712A6AA61A00B9AA0B /* UIView + Extension.swift in Sources */,
+				6A4A39C82A69ABA3009532FD /* CardView.swift in Sources */,
 				6AF418A32A67153300432775 /* SceneDelegate.swift in Sources */,
 				6A07C6722A69827D000241EE /* HomeViewController.swift in Sources */,
 				6A07C66A2A697A16000241EE /* CategoryDish.swift in Sources */,
 				6A07C6672A69767E000241EE /* CategoryCollectionViewCell.swift in Sources */,
 				6AF418BB2A6716CF00432775 /* OnboardingViewController.swift in Sources */,
+				6AF444752A6AB61800B9AA0B /* DishPortraitCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

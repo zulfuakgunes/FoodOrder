@@ -1,6 +1,6 @@
 
 import Foundation
 
-struct CategoryDish{
+struct CategoryDish:Decodable{
     let id, name, image:String
 }

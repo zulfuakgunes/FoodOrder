@@ -14,6 +14,7 @@
 		6A07C66F2A697F35000241EE /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A07C66E2A697F35000241EE /* String+Extension.swift */; };
 		6A07C6722A69827D000241EE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A07C6712A69827D000241EE /* HomeViewController.swift */; };
 		6A4A39C82A69ABA3009532FD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4A39C72A69ABA3009532FD /* CardView.swift */; };
+		6AF3B8122A6BF60B0018FDE1 /* DishDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF3B8112A6BF60B0018FDE1 /* DishDetailsViewController.swift */; };
 		6AF418A12A67153300432775 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF418A02A67153300432775 /* AppDelegate.swift */; };
 		6AF418A32A67153300432775 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF418A22A67153300432775 /* SceneDelegate.swift */; };
 		6AF418A82A67153300432775 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AF418A62A67153300432775 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		6A07C66E2A697F35000241EE /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		6A07C6712A69827D000241EE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6A4A39C72A69ABA3009532FD /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		6AF3B8112A6BF60B0018FDE1 /* DishDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailsViewController.swift; sourceTree = "<group>"; };
 		6AF4189D2A67153300432775 /* FoodOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AF418A02A67153300432775 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AF418A22A67153300432775 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,14 @@
 			path = CardView;
 			sourceTree = "<group>";
 		};
+		6AF3B8102A6BF5E00018FDE1 /* DishDetails */ = {
+			isa = PBXGroup;
+			children = (
+				6AF3B8112A6BF60B0018FDE1 /* DishDetailsViewController.swift */,
+			);
+			path = DishDetails;
+			sourceTree = "<group>";
+		};
 		6AF418942A67153300432775 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +161,7 @@
 		6AF418B62A67158500432775 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6AF3B8102A6BF5E00018FDE1 /* DishDetails */,
 				6A07C6702A698255000241EE /* Home */,
 				6AF418B92A67165400432775 /* Onboarding */,
 			);
@@ -301,6 +312,7 @@
 				6A07C6672A69767E000241EE /* CategoryCollectionViewCell.swift in Sources */,
 				6AF418BB2A6716CF00432775 /* OnboardingViewController.swift in Sources */,
 				6AF444752A6AB61800B9AA0B /* DishPortraitCollectionViewCell.swift in Sources */,
+				6AF3B8122A6BF60B0018FDE1 /* DishDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -33,6 +33,7 @@ class HomeViewController: UIViewController{
         super.viewDidLoad()
         popularCollectionView.dataSource = self
         popularCollectionView.delegate = self
+        
         registerCell()
     }
     
@@ -40,6 +41,8 @@ class HomeViewController: UIViewController{
         categoryCollectionView.register(UINib(nibName: CategoryCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
         
         popularCollectionView.register(UINib(nibName: DishPortraitCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: DishPortraitCollectionViewCell.identifier)
+        
+        chefCollectionView.register(UINib(nibName: ChefCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ChefCollectionViewCell.identifier)
     }
     
 }
@@ -51,6 +54,8 @@ extension HomeViewController:UICollectionViewDataSource{
             return categories.count
         case popularCollectionView:
             return popularDishes.count
+        case chefCollectionView:
+            return specials.count
         default:
             return 0
         }
@@ -66,6 +71,11 @@ extension HomeViewController:UICollectionViewDataSource{
             return cell
         case popularCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DishPortraitCollectionViewCell.identifier, for: indexPath) as! DishPortraitCollectionViewCell
+            
+            cell.setup(dish: popularDishes[indexPath.row])
+            return cell
+        case chefCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChefCollectionViewCell.identifier, for: indexPath) as! ChefCollectionViewCell
             
             cell.setup(dish: popularDishes[indexPath.row])
             

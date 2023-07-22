@@ -17,10 +17,10 @@ class HomeViewController: UIViewController{
     ]
     
     var popularDishes:[Dish] = [
-        .init(id: "id1", label: "Garri", image: "https://via.placeholder.com/150/92c952", description: "lorem ipsum dolor sit amet consectetur adipiscing elit", calories: 15.834),
-        .init(id: "id2", label: "Larrys", image: "https://via.placeholder.com/150/92c952", description: "lorem ipsum dolor sit amet consectetur adipiscing elit", calories: 17.934),
-        .init(id: "id3", label: "Daires", image: "https://via.placeholder.com/150/92c952", description: "lorem ipsum dolor sit amet consectetur adipiscing elit", calories: 14.760),
-        .init(id: "id4", label: "Ladys", image: "https://via.placeholder.com/150/92c952", description: "lorem ipsum dolor sit amet consectetur adipiscing elit", calories: 13.895)
+        .init(id: "id1", label: "Garri", image: "https://via.placeholder.com/650/92c952", description: "lorem ipsum dolor sit amet consectetur adipiscing elit", calories: 15.834),
+        .init(id: "id2", label: "Larrys", image: "https://via.placeholder.com/650/92c952", description: "lorem ipsum dolor sit amet consectetur adipiscing elit", calories: 17.934),
+        .init(id: "id3", label: "Daires", image: "https://via.placeholder.com/650/92c952", description: "lorem ipsum dolor sit amet consectetur adipiscing elit", calories: 14.760),
+        .init(id: "id4", label: "Ladys", image: "https://via.placeholder.com/650/92c952", description: "lorem ipsum dolor sit amet consectetur adipiscing elit", calories: 13.895)
     ]
     
     var specials:[Dish] = [
@@ -83,14 +83,17 @@ extension HomeViewController:UICollectionViewDataSource{
         default:
             return UICollectionViewCell()
         }
-        
-        
-        
     }
-    
-    
 }
 
 extension HomeViewController: UICollectionViewDelegate{
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == categoryCollectionView{
+            
+        }else{
+            let controller = DishDetailsViewController.instantiate()
+            controller.dish = collectionView == popularCollectionView ? popularDishes[indexPath.row] : specials[indexPath.row]
+            navigationController?.pushViewController(controller, animated: true)
+        }
+    }
 }

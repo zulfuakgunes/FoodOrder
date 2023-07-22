@@ -7,6 +7,7 @@ class HomeViewController: UIViewController{
     @IBOutlet weak var popularCollectionView: UICollectionView!
     
     @IBOutlet weak var chefCollectionView: UICollectionView!
+    
     var categories:[CategoryDish] = [
         .init(id: "id1", name: "Africa Dish", image: "https://via.placeholder.com/150/92c952"),
         .init(id: "id2", name: "Africa Dish 2", image: "https://via.placeholder.com/150/92c952"),
@@ -22,18 +23,24 @@ class HomeViewController: UIViewController{
         .init(id: "id4", label: "Ladys", image: "https://via.placeholder.com/150/92c952", description: "lorem ipsum dolor sit amet consectetur adipiscing elit", calories: 13.895)
     ]
     
+    var specials:[Dish] = [
+        .init(id: "id2", label: "Larrys", image: "https://via.placeholder.com/150/92c952", description: "lorem ipsum dolor sit amet consectetur adipiscing elit", calories: 17.934),
+        .init(id: "id3", label: "Daires", image: "https://via.placeholder.com/150/92c952", description: "lorem ipsum dolor sit amet consectetur adipiscing elit", calories: 14.760),
+        .init(id: "id4", label: "Ladys", image: "https://via.placeholder.com/150/92c952", description: "lorem ipsum dolor sit amet consectetur adipiscing elit", calories: 13.895)
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        popularCollectionView.dataSource = self
+        popularCollectionView.delegate = self
         registerCell()
     }
     
     private func registerCell(){
-        categoryCollectionView.register(UINib(nibName: "CategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
+        categoryCollectionView.register(UINib(nibName: CategoryCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
         
         popularCollectionView.register(UINib(nibName: DishPortraitCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: DishPortraitCollectionViewCell.identifier)
     }
-    
     
 }
 
@@ -60,7 +67,7 @@ extension HomeViewController:UICollectionViewDataSource{
         case popularCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DishPortraitCollectionViewCell.identifier, for: indexPath) as! DishPortraitCollectionViewCell
             
-            cell.setup( popularDishes[indexPath.row])
+            cell.setup(dish: popularDishes[indexPath.row])
             
             return cell
         default:

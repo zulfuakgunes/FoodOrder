@@ -2,7 +2,7 @@ import UIKit
 
 class OnboardingCollectionViewCell: UICollectionViewCell{
     
-    //static let identifier = String(describing: OnboardingCollectionViewCell.self)
+    static let identifier = String(describing: OnboardingCollectionViewCell.self)
 
     
     @IBOutlet weak var slideImageView: UIImageView!

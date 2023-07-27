@@ -13,6 +13,19 @@ class HomeViewController: UIViewController{
         .init(id: "id2", name: "Africa Dish 2", image: "https://via.placeholder.com/150/92c952"),
         .init(id: "id3", name: "Africa Dish 3", image: "https://via.placeholder.com/150/92c952"),
         .init(id: "id4", name: "Africa Dish 4", image: "https://via.placeholder.com/150/92c952"),
+        .init(id: "id5", name: "Africa Dish 5", image: "https://via.placeholder.com/150/92c952"),
+        .init(id: "id5", name: "Africa Dish 5", image: "https://via.placeholder.com/150/92c952"),
+        .init(id: "id5", name: "Africa Dish 5", image: "https://via.placeholder.com/150/92c952"),
+        .init(id: "id5", name: "Africa Dish 5", image: "https://via.placeholder.com/150/92c952"),
+        .init(id: "id5", name: "Africa Dish 5", image: "https://via.placeholder.com/150/92c952"),
+        .init(id: "id5", name: "Africa Dish 5", image: "https://via.placeholder.com/150/92c952"),
+        .init(id: "id5", name: "Africa Dish 5", image: "https://via.placeholder.com/150/92c952"),
+        .init(id: "id5", name: "Africa Dish 5", image: "https://via.placeholder.com/150/92c952"),
+        .init(id: "id5", name: "Africa Dish 5", image: "https://via.placeholder.com/150/92c952"),
+        .init(id: "id5", name: "Africa Dish 5", image: "https://via.placeholder.com/150/92c952"),
+        .init(id: "id5", name: "Africa Dish 5", image: "https://via.placeholder.com/150/92c952"),
+        .init(id: "id5", name: "Africa Dish 5", image: "https://via.placeholder.com/150/92c952"),
+        .init(id: "id5", name: "Africa Dish 5", image: "https://via.placeholder.com/150/92c952"),
         .init(id: "id5", name: "Africa Dish 5", image: "https://via.placeholder.com/150/92c952")
     ]
     
@@ -89,6 +102,9 @@ extension HomeViewController:UICollectionViewDataSource{
 extension HomeViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == categoryCollectionView{
+            let controller = ListDishesViewController.instantiate()
+            controller.category = categories[indexPath.row]
+            navigationController?.pushViewController(controller, animated: true)
             
         }else{
             let controller = DishDetailsViewController.instantiate()

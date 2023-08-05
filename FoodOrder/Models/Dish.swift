@@ -1,6 +1,6 @@
 import Foundation
 
-struct Dish:Decodable{
+struct Dish: Decodable{
     let id, label, image, description:String?
     let calories:Double?
     

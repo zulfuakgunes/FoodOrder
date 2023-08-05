@@ -1,15 +1,13 @@
 import UIKit
+import ProgressHUD
 
 class ListDishesViewController:UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
     
     var category: CategoryDish!
-    let dishes:[Dish] = [
-        .init(id: "id2", label: "Larrys", image: "https://via.placeholder.com/150/92c952", description: "lorem ipsum dolor sit amet consectetur adipiscing elit", calories: 17.934),
-        .init(id: "id3", label: "Daires", image: "https://via.placeholder.com/150/92c952", description: "lorem ipsum dolor sit amet consectetur adipiscing elit", calories: 14.760),
-        .init(id: "id4", label: "Ladys", image: "https://via.placeholder.com/150/92c952", description: "lorem ipsum dolor sit amet consectetur adipiscing elit", calories: 13.895)
-    ]
+
+    var dishes:[Dish] = []
     
     private func registerCells(){
         tableView.register(UINib(nibName: DishListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: DishListTableViewCell.identifier)
@@ -17,12 +15,26 @@ class ListDishesViewController:UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ProgressHUD.show()
+        NetworkService.shared.fetchCategoryDishes(dishId: category.id ?? "") {[weak self] result in
+            switch result {
+            case .success(let dishes):
+                ProgressHUD.dismiss()
+                self?.dishes = dishes
+                self?.tableView.reloadData()
+            case .failure(let error):
+                ProgressHUD.showError(error.localizedDescription)
+                
+            }
+        }
+        
         registerCells()
     }
     
 }
 
 extension ListDishesViewController:UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         dishes.count
     }

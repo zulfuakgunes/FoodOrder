@@ -9,6 +9,10 @@ class ListOrdersViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Order"
+        registerCells()
+
         ProgressHUD.show()
     }
     
@@ -18,6 +22,7 @@ class ListOrdersViewController: UIViewController{
             case .success(let orders):
                 ProgressHUD.dismiss()
                 self?.orders = orders
+                self?.tableView.reloadData()
             case .failure(let error):
                 ProgressHUD.show(error.localizedDescription)
             }
@@ -37,9 +42,15 @@ extension ListOrdersViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: DishListTableViewCell.identifier) as! DishListTableViewCell
-        //cell.setup(dish: orders[indexPath.row])
+        cell.setup(order: orders[indexPath.row])
         return cell
     }
-    
-    
+}
+
+extension ListOrdersViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let controller = DishDetailsViewController.instantiate()
+        controller.dish = orders[indexPath.row].dish
+        navigationController?.pushViewController(controller, animated: true)
+    }
 }

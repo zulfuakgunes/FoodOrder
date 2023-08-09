@@ -16,7 +16,7 @@ enum Route{
         case .fetchListDishes(let listDishes):
             return "/dishes/\(listDishes)"
         case .fetchAllOrders:
-            return "orders"
+            return "/orders"
         }
     }
 }

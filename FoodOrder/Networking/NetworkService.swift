@@ -12,7 +12,7 @@ struct NetworkService{
     
     func placeOrder(dishId:String, name:String, completion: @escaping (Result<Orders, Error>) -> Void){
         let params = ["name" : name]
-        request(route: .placeOrder(dishId), method: .post, completion: completion)
+        request(route: .placeOrder(dishId), method: .post, parameters: params ,completion: completion)
     }
     
     func fetchCategoryDishes(dishId: String, completion: @escaping (Result<[Dish],Error>) -> Void) {
